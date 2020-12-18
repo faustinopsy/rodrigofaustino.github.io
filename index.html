@@ -1,417 +1,451 @@
 <!DOCTYPE html>
 <html>
-<script type="text/javascript">
-var isNS = (navigator.appName == "Netscape") ? 1 : 0; var EnableRightClick = 0; if(isNS) document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP); function mischandler(){ if(EnableRightClick==1){ return true; } else {return false; } } function mousehandler(e){ if(EnableRightClick==1){ return true; } var myevent = (isNS) ? e : event; var eventbutton = (isNS) ? myevent.which : myevent.button; if((eventbutton==2)||(eventbutton==3)) return false; } function keyhandler(e) { var myevent = (isNS) ? e : window.event; if (myevent.keyCode==96) EnableRightClick = 1; return; } document.oncontextmenu = mischandler; document.onkeypress = keyhandler; document.onmousedown = mousehandler; document.onmouseup = mousehandler;
-</script>
-<title>Softwares e Websites - Rodrigo Faustino</title>
-<meta charset="UTF-8">
+<head>
+	
+<title>Rodrigo Faustino apps</title>
+ <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="font/font-awesome/css/font-awesome.min.css">
- <link rel="stylesheet" href="css/style.css" type="text/css">
-  <link rel="stylesheet" href="css/w3.css" type="text/css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Arial", sans-serif;}
-body, html {
-  height: 100%; 
-  color: #777;
-  line-height: 1.8;
+<link href="css/w3.css" rel="stylesheet" />
+<link href="js/bootstrap.min.css" rel="stylesheet" />
+<link href="css/w4.css" rel="stylesheet" />
+<link href="css/w3-theme-teal.css" rel="stylesheet" />
+<link href="css/cyrillic.css" rel="stylesheet" />
+<link href="css/font-awesome.min.css" rel="stylesheet" /><script src="js/jquery.min.js"></script>
+<link href="font/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<style type="text/css">body {
+    font-family: "Roboto", sans-serif}
+.w3-bar-block .w3-bar-item {
+  padding: 16px;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  font-size: 25px;
 }
-=======
-<html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>Rodrigo Faustino</title>
-		<meta name="description" content="Circular Navigation Styles - Building a Circular Navigation with CSS Transforms | Codrops " />
-		<meta name="keywords" content="css transforms, circular navigation, round navigation, circular menu, tutorial" />
-		<meta name="author" content="Sara Soueidan for Codrops" />
-		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/component1.css" />
-		<script src="js/modernizr-2.6.2.min.js"></script>
-
-
->>>>>>> b889042a9576f880a87a9c5d2b5c675c53b7956e
-
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  background-attachment: fixed; 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-    min-height: 400px;
-  }
-}
-.open-button {
-  background-color: #555;
+.dark-mode {
+  background-color: black;
   color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 28px;
-  width: 280px;
 }
-
-/* The popup chat - hidden by default */
-.chat-popup {
+#myBtn {
   display: none;
   position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-}
-
-/* Add styles to the form container */
-.form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
-}
-
-/* Full-width textarea */
-.form-container textarea {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
+  bottom: 5px;
+  right: 70px;
+  z-index: 99;
+  font-size: 18px;
   border: none;
-  background: #f1f1f1;
-  resize: none;
-  min-height: 200px;
-}
-
-/* When the textarea gets focus, do something */
-.form-container textarea:focus {
-  background-color: #ddd;
   outline: none;
-}
-
-/* Set a style for the submit/send button */
-.form-container .btn {
-  background-color: #4CAF50;
+  background-color: teal;
   color: white;
-  padding: 16px 20px;
-  border: none;
   cursor: pointer;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: teal;
+   color: white;
+   text-align: right;
+   opacity:0.8;
+}
+.fa-hand-o-right  {
+    display: inline-block;
+    position: relative;
+    -moz-animation: bounce 1s infinite linear;
+    -o-animation: bounce 1s infinite linear;
+    -webkit-animation: bounce 1s infinite linear;
+    animation: bounce 1s infinite linear;
+}
+
+@-webkit-keyframes bounce {
+    0% { left: 0; }
+    50% { left: -0.2em; }
+    70% { left: -0.3em; }
+    100% { left: 0; }
+}
+@-moz-keyframes bounce {
+    0% { left: 0; }
+    50% { left: -0.2em; }
+    70% { left: -0.3em; }
+    100% { left: 0; }
+}
+@-o-keyframes bounce {
+    0% { left: 0; }
+    50% { left: -0.2em; }
+    70% { left: -0.3em; }
+    100% { left: 0; }
+}
+@-ms-keyframes bounce {
+    0% { left: 0; }
+    50% { left: -0.2em; }
+    70% { left: -0.3em; }
+    100% { left: 0; }
+}
+@keyframes bounce {
+    0% { left: 0; }
+    50% { left: -0.2em; }
+    70% { left: -0.3em; }
+    100% { left: 0; }
+}
+.fa-hand-o-left{
+    display: inline-block;
+    position: relative;
+    -moz-animation: bounce 1s infinite linear;
+    -o-animation: bounce 1s infinite linear;
+    -webkit-animation: bounce 1s infinite linear;
+    animation: bounce 1s infinite linear;
+}
+
+@-webkit-keyframes bounce {
+    0% { left: 0; }
+    50% { left: -0.2em; }
+    70% { left: -0.3em; }
+    100% { left: 0; }
+}
+@-moz-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-o-keyframes bounce {
+    0% { left: 0; }
+    50% { left: -0.2em; }
+    70% { left: -0.3em; }
+    100% { left: 0; }
+}
+@-ms-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@keyframes bounce {
+    0% { left: 0; }
+    50% { left: -0.2em; }
+    70% { left: -0.3em; }
+    100% { left: 0; }
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: black
+}
+
+input:focus + .slider {
+  box-shadow: 1 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
   width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+ color: black;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
+
+.flip-card-front {
+  background-color: transparent;
+  color: black;
+}
+
+.flip-card-back {
+   background-color:teal;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: left;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
 </style>
-<body>
-
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="#home" class="w3-bar-item w3-button">INICIAL</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> SOBRE MIM</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTATO</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">SOBRE MIM</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTATO</a>
-    <a href="#" class="w3-bar-item w3-button"></a>
-  </div>
-</div>
-<section>
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-top w3-padding-large  w3-xlarge w3-wide w3-animate-opacity"> <span class="w3-hide-small">Rodrigo</span> Faustino</span>
-  </div>
-</div>
-
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">SOBRE MIM</h3>
-  <p class="w3-center"><em>Amo programar!!!</em></p>
-  <p>Meu nome é Rodrigo Faustino sou Analista de sistemas e desenvolvedor de sistemas.</p>
-  <p>Aqui você poderá contratar seu serviço como criação de site ou orçamento de um sistema para seu negocio.</p>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>Rodrigo Faustino</b></p><br>
-      <img src="img/rodrigo-faustino.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="200" height="133">
+<body onload="bemvindo()" onselectstart="return false" oncontextmenu="return false">
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-card" id="mySidebar" style="z-index:3;width:250px;">
+    <a class="w3-bar-item w3-button w3-border-bottom w3-large " href="#"><img src="img/rodrigo_faustino.png" style="width:50%;" /></a>
+    <a class="w3-bar-item w3-button w3-teal" href="#">Inicio</a> <a class="w3-bar-item w3-button" onclick="w3_close()" href="#about">Sobre mim</a> 
+      <a class="w3-bar-item w3-button" onclick="w3_close()" href="#portfolio">Portifólio</a> 
+    <a class="w3-bar-item w3-button" onclick="w3_close()" href="#cursos">Cursos</a> 
+  <a class="w3-bar-item w3-button" onclick="w3_close()" href="#consulta">Consultoria</a>
+   <a class="w3-bar-item w3-button" onclick="w3_close()" href="#venda">À venda</a>
+   <a class="w3-bar-item w3-button" onclick="w3_close()" href="loja">Loja Virtual</a>
+  <!-- 
+  <a class="w3-bar-item w3-button" href="#">Link 5</a>
+ <div>
+    <a class="w3-bar-item w3-button" onclick="myAccordion('demo')" href="javascript:void(0)">Dropdown <i class="fa fa-caret-down"></i></a>
+    <div id="demo" class="w3-hide">
+      <a class="w3-bar-item w3-button" href="#">Link</a>
+      <a class="w3-bar-item w3-button" href="#">Link</a>
+      <a class="w3-bar-item w3-button" href="#">Link</a>
     </div>
-
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Bem vindo ao meu website, este site se destina unicamente a divulgação de meus projetos e um espeço reservado para contato e orçamento para serviços de desenvolvimento de software ou website.</p>
-	  <p> Trabalho ainda com administração de domínios e hospedagem de sistemas ou websites. </p>
-	  <p> Abaixo você encontrará alguns sistemas ou sites já desenvolvidos. </p>
-    </div>
-  </div>
-  <p class="w3-large w3-center w3-padding-16">Sou realmente bom em:</p>
-  <p class="w3-wide"><i class="fa fa-laptop"></i>PHP</p>
-  <div class="w3-light-grey">
-  <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-laptop"></i>JAVASCRIPT</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
-  </div>
-   <p class="w3-wide"><i class="fa fa-laptop"></i>JAVA</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">85%</div>
-  </div>
-  
-  <p class="w3-wide"><i class="fa fa-laptop"></i>MySQL</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">85%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-laptop"></i>MSSQL Server</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">85%</div>
-  </div>
+  </div>-->
  
+  </nav>
+
+<div class="w3-overlay w3-hide-large w3-animate-opacity" id="myOverlay" onclick="w3_close()" style="cursor:pointer"></div>
+
+<div class="w3-main" style="margin-left:250px;">
+<div class="w3-container w3-top w3-theme w3-large  w3-opacity" id="myTop"> <button class="w3-button  w3-xlarge w3-hide-large" onclick="w3_open()"><i class="fa fa-bars" aria-hidden="true"></i></button>
+<p><span class="w3-hide" id="myIntro">Rodrigo Faustino</span></p>
 </div>
 
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  
+<header class="w3-container w3-theme" style="padding:64px 32px"><meta charset="utf-8">
+<h1 class="w3-xxxlarge">Rodrigo Faustino</h1>
+</header>
+
+<div class="w3-cell-row" id="about">
+<div class="w3-container  w3-border w3-cell w3-mobile">
+<p class="w3-large w3-center w3-padding-16">Algumas habilidades:</p>
+
+<div class="w3-light-grey">PHP
+<div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+</div>
+<p class="w3-wide"></p>
+<div class="w3-light-grey">JAVASCRIPT
+<div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+</div>
+<p class="w3-wide"></p>
+<div class="w3-light-grey">JAVA
+<div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+</div>
+<p class="w3-wide"></p>
+<div class="w3-light-grey">Estudando Python
+<div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:5%">5%</div>
+</div>
+<p class="w3-wide"></p>
+<div class="w3-light-grey">MySQL
+<div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
 </div>
 
-<!-- Second Parallax Image with Portfolio Text -->
-
- 
-    <span class="w3-xxlarge  w3-wide">PORTFOLIO</span>
- 
-
-
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">MEUS PROJETOS</h3>
-  <p class="w3-center"><em>Aqui estão alguns dos meus últimos trabalhos .<BR>
-Clique nas imagens para aumentá-las</em></p><br>
-
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-     <img src="img/1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Rede social de terapeutas"> 
-      <a href="http://apps.rodrigofaustino.com.br/terapeuta" target="_blank" ><i class="fa fa-external-link fa-2x"></i>Abrir</a> 
-    </div>
-
-    <div class="w3-col m3">
-      <img src="img/2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Site para Advogados">
-      <a href="http://bezerraecoutinho.com.br/" target="_blank" ><i class="fa fa-external-link fa-2x"></i>Abrir</a> 
-    </div>
-
-    <div class="w3-col m3">
-      <img src="img/3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Site pessoal Hipnose">
-      <a href="http://rodrigofaustino.com.br" target="_blank" ><i class="fa fa-external-link fa-2x"></i>Abrir</a> 
-    </div>
-
-    <div class="w3-col m3">
-      <img src="img/4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sistema gerencia escola">
-      <a href="http://apps.rodrigofaustino.com.br/escola/v15/login.php" target="_blank" ><i class="fa fa-external-link fa-2x"></i>Abrir</a> 
-    </div>
-  </div>
-
-  <div class="w3-row-padding w3-center w3-section">
-     <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-     <img src="img/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Caça Dengue"> 
-      <a href="https://play.google.com/store/apps/details?id=com.rodrigofaustino.dengue" target="_blank" ><i class="fa fa-external-link fa-2x"></i>Abrir</a> 
-    </div>
-
-    <div class="w3-col m3">
-      <img src="img/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Aplicativo simulador de provas de concursos públicos">
-      <a href="https://play.google.com/store/apps/details?id=com.appybuilder.ev_rodrigo_eterno.concursosx" target="_blank" ><i class="fa fa-external-link fa-2x"></i>Abrir</a> 
-    </div>
-
-    <div class="w3-col m3">
-      <img src="img/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Aplicativo leitura facial das emoções">
-      <a href="https://play.google.com/store/apps/details?id=com.rodrigofaustino.faces" target="_blank" ><i class="fa fa-external-link fa-2x"></i>Abrir</a> 
-    </div>
-
-    <div class="w3-col m3">
-      <img src="img/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Game 2048 Blocos">
-      <a href="https://play.google.com/store/apps/details?id=com.rodrigofaustino.br2048x" target="_blank" ><i class="fa fa-external-link fa-2x"></i>Abrir</a> 
-    </div>
-    
-    <div class="w3-col m3">
-      <img src="img/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Aplicativo Teste de inteligencia">
-      <a href="https://play.google.com/store/apps/details?id=com.appybuilder.ev_rodrigo_eterno.inteligencia" target="_blank" ><i class="fa fa-external-link fa-2x"></i>Abrir</a> 
-    </div>
-
-    <div class="w3-col m3">
-      <img src="img/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Aplicativo Teste de memoria">
-      <a href="https://play.google.com/store/apps/details?id=com.appybuilder.ev_rodrigo_eterno.memoriax" target="_blank" ><i class="fa fa-external-link fa-2x"></i>Abrir</a> 
-    </div>
-
-    <div class="w3-col m3">
-      <img src="img/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Pratica de mindfulness">
-      <a href="https://play.google.com/store/apps/details?id=com.appybuilder.ev_rodrigo_eterno.mindfulness" target="_blank" ><i class="fa fa-external-link fa-2x"></i>Abrir</a> 
-    </div>
-  </div>
-    
-  </div>
+<p class="w3-wide"></p>
+<div class="w3-light-grey">MSSQL Server
+<div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+</div>
 </div>
 
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
+<div class="w3-container w3-border w3-cell w3-mobile">
+<div class="row">
+<div class="column"><img alt="Rodrigo faustino" src="img/rodrigo_faustino.png" style="width:30%" />
+<div class="container">
+<h2>Rodrigo Faustino</h2>
+
+<p class="title">CEO </p>
+
+<p><a href="https://www.facebook.com/rodrigofaustinopsy" target="_blank"><img alt="facebook" src="img/fc.png" style="width:5%" />rodrigofaustinopsy</a></p>
+
+<p><a href="https://www.instagram.com/rodrigofaustinopsy" target="_blank"><img alt="Instagram" src="img/ins.png" style="width:5%" />rodrigofaustinopsy</a></p>
+
+<p><a href="https://www.twiter.com/rodrigofautino" target="_blank"><img alt="Twiter" src="img/twi.png" style="width:5%" />RodrigoFautino</a></p>
+
+<p></p>
+
+<p><a class="open-button" onclick="openForm()"><i class="fa fa-hand-o-right" style="color:red"></i>
+<i class="fa fa-envelope fa-2x" style="color:green"></i>
+ Contato </a><i class="fa fa-hand-o-left" style="color:red"></i></p>
+
+<div class="chat-popup" id="myForm" style="display:none">
+<form class="form-container" method="post" onsubmit="return postTese();">
+<div class="w3-padding-44 w3-content " id="contato">
+<h4>CONTATO</h4>
+
+<hr class="w3-opacity" style="width:100%" />
+<p>Envie sua mensagem, responderei o mais breve possivel:</p>
+<!--<form action="envia.php"  method="post">-->
+
+<p><input class="w3-input w3-padding-14" name="nomeremetente" placeholder="Nome" required="" type="text" /></p>
+
+<p><input class="w3-input w3-padding-14" name="emailremetente" placeholder="Email" required="" type="text" /></p>
+
+<p><input class="w3-input w3-padding-14" name="assunto" placeholder="Assunto" required="" type="text" /></p>
+
+<p><input class="w3-input w3-padding-14" name="mensagem" placeholder="Mensagem" required="" type="text" /></p>
+
+<p><button class="w3-button w3-light-grey w3-padding-large" type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>
+ Enviar</button></p>
+<script type="text/javascript">
+    $(document).ready(function() {
+       $('.close').click(function () {
+           $('.valida').remove();
+           $('.abrir').slideToggle();
+       });
+    });
+    function postTese() {
+        var campo1 = $('input[name="nomeremetente"]').val();
+        var campo2 = $('input[name="emailremetente"]').val();
+        var campo3 = $('input[name="assunto"]').val();
+        var campo4 = $('input[name="mensagem"]').val();
+        $.ajax({
+            data: {nomeremetente: campo1, emailremetente: campo2, assunto: campo3, mensagem: campo4},
+            url: 'envia.php',
+            dataType: 'html',
+            type: 'POST',
+            beforeSend: function () {
+                $('.mostrapost').html("<div class=\"Enviar\"></div>");
+                $('.abrir').slideToggle();
+            },
+            success: function (data) {
+                $('.mostrapost').html(data);
+                $('input[name="nomeremetente"]').val("");
+                $('input[name="emailremetente"]').val("");
+                $('input[name="assunto"]').val("");
+                $('input[name="mensagem"]').val("");
+                document.getElementById("myForm").style.display = "none";
+            }
+        });
+        return false;
+    }
+</script>
+
+<div class="abrir" style="display:none; font-size: 2em; ">
+<div class="mostrapost"></div>
 </div>
-
-
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  
-</div>
-  
-     <span class="w3-xxlarge  w3-wide">CONTATO</span>
- 
-
-
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">ONDE ESTOU</h3>
-  <p class="w3-center"><em></em></p>
-
-  <div class="w3-row w3-padding-32 w3-section">
-    <div class="w3-col m4 w3-container">
-      
-    </div>
-    <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>SÃO PAULO, BR<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 11 - 94213-9091<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: contato@rodrigofaustino.com.br<br>
-      </div>
-      <p>Me chame para <i class="fa fa-coffee"></i>, saber o que precisa:</p>
-      <form action="https://apps.rodrigofaustino.com.br/envia.php" method="post">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required id="nomeremetente" name="nomeremetente">
-          </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required id="emailremetente" name="emailremetente">
-          </div>
-        </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required id="mensagem" name="mensagem">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
-          <i class="fa fa-paper-plane"></i> ENVIAR MENSAGEM
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
-<button class="open-button" onclick="openForm()">Chat bot</button>
-
-<div class="chat-popup" id="myForm">
-  <form action="" class="form-container">
-    <h1>Chat-bot</h1>
-
-    <label for="msg" id="xx"><b>Mensagem</b></label>
-    <input type="text" placeholder="Escreva.." name="msg" id="msg" required  />
-
-    <button type="submit" class="btn" onclick="talk();">Enviar</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Fechar</button>
-  </form>
-</div>
-<script src="css/jquery.min.js"></script>
-<body>
-<br> 
-
- <p id="chatLog"></p>
-<input id="userBox" type="text" style='width:100%; border:6' onkeydown="if (event.keyCode == 13) {talk()}">
-	   
-	</body>
-<<<<<<< HEAD
-		<script>
-		
-			know = {
-			       "olá" : "olá tudo bem ",
-				"como você está?" : " bem e você?",
-				"estou triste" : "ruim, mas a tristeza vai passar",
-				"não estou muito bem" : "por algum motivo em especial?",
-				"não estou muito bem" : "por algum motivo em especial?",
-				"sim" : "sim, o quê?",
-				"estou feliz" : " que bom fico feliz por você",
-				"eu não me sinto bem" : "o que sente? é dor?",
-				"estou com dor" : "onde é sua dor?",
-				"no coração" : "você pode dizer de 0 a 10 quanto é esta dor?",
-				"me sinto feliz" : "qual o motivo?",
-				"qual o seu nome" : "tenho muitos nome",
-				"fale um deles" : " um deles o quê",
-				"um de seus nomes" : "me chame como quiser",
-				"como você foi feito" : "bem simples, poucas linhas",
-				"fale um nome" : "Javis zero1",
-				"o que é você?" : "sou o seu ajudador",
-				"seu nome?" : "meu nome é zero1",
-				"qual é o seu sexo" : "eu não tenho, sou um programa",
-				"quem te criou" : "a mente humana",
-				"você sabe todas as respostas" : "só o que preciso saber",
-				"bom dia" : "bom dia, tudo bem?",
-				"boa tarde" : "boa tarde, tudo bem?",
-				"boa noite" : "boa noite, tudo bem?",
-				"qual o valor de um sistema" : "depende do que você precisa",
-				"qual o valor de um site" : "depende do que você precisa",
-				"qual o preço de um sistema" : "depende do que você precisa",
-				"qual o preço de um site" : "depende do que você precisa",
-				"qual o valor de um sistema?" : "depende do que você precisa",
-				"qual o valor de um site?" : "depende do que você precisa",
-				"qual o preço de um sistema?" : "depende do que você precisa",
-				"qual o preço de um site?" : "depende do que você precisa",
-				"preciso de um site" : "use o formulário da página que o mais breve possivel entraremos em contato",
-				"preciso de um sistema" : "use o formulário da página, que entraremos em contato",
-				
-				"boa tarde" : "boa tarde, tudo bem?",
-				"boa noite" : "boa noite, tudo bem?",
-				"ok" : ":)"
-			};
-			function talk() {
-			var user = document.getElementById("msg").value;
-			 
-
-  	
-				document.getElementById("msg").value = "";
-				document.getElementById("xx").innerHTML += "<p style='color:green;'>Eu: "+user+"</p>";
-				if (user in know) {
-					document.getElementById("xx").innerHTML +="<p style='color:red;'>zero1:<b><img src='phpimages/javis.gif' alt='Avatar' style='width:10%;'> "+ know[user]+"</b></p>";
-				} else {
-					document.getElementById("xx").innerHTML += "<p style='background-color:Tomato;'>zero1:<b> acho que não entendi, melhore a pergunta, caso eu não saiba hoje daqui uma semana terei a resposta</b></p>";
-				}
-			} 
-			
-		</script>
+<!-- End Contact Section --></div>
+</form>
+<button class="w3-button w3-light-grey w3-padding-large" onclick="closeForm()" type="button"><i class="fa fa-ban" aria-hidden="true"></i>
+ Fechar</button></div>
 <script>
 function openForm() {
   document.getElementById("myForm").style.display = "block";
@@ -420,71 +454,719 @@ function openForm() {
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
-</script>
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-   
-	<div class="icon-bar">
- <a href="https://www.instagram.com/rodrigo_hipnologo/" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a> 
- <a href="https://www.facebook.com/rodrigo.hipnologo" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a> 
-<a href="https://youtube.com/menteaberta" target="_blank" class="youtube"><i class="fa fa-youtube"></i></a> 
-  <a href="https://twitter.com/RodrigoFautino" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a> 
-  <a href="https://www.linkedin.com/in/rodrigo-faustino-655934163/" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
-   <a href="https://www.google.com/maps/place/Hipnose+cl%C3%ADnica+-+Rodrigo+Faustino/@-23.581608,-46.6399507,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x58ce588d960cb029!8m2!3d-23.581608!4d-46.637762" target="_blank" class="map"><i class="fa fa-map-marker" style="font-size:24px;color:green"></i></a>  
+
+
+
+
+</script></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Container (Portfolio Section) -->
+
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+<h3 class="w3-center">MEUS PROJETOS</h3>
+
+<p class="w3-center"><em>Aqui est&atilde;o alguns dos meus &uacute;ltimos trabalhos .<br />
+Clique nas imagens para aument&aacute;-las</em></p>
+<br />
+<!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+<div class="w3-row-padding w3-center">
+<div class="w3-col m3"><img alt="Rede social de terapeutas" class="w3-hover-opacity" onclick="onClick(this)" src="img/1.jpg" style="width:100%" /> <a href="https://apps.rodrigofaustino.com.br/terapeuta" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+ Abrir</a></div>
+
+<div class="w3-col m3"><img alt="Sistema de calendários ou eventos" class="w3-hover-opacity" onclick="onClick(this)" src="img/calendario.png" style="width:100%" /> <a href="https://apps.rodrigofaustino.com.br/app/calendario" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+ Abrir</a></div>
+
+<div class="w3-col m3"><img alt="Site pessoal Hipnose" class="w3-hover-opacity" onclick="onClick(this)" src="img/3.jpg" style="width:100%" /> <a href="https://rodrigofaustino.com.br" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+ Abrir</a></div>
+
+<div class="w3-col m3"><img alt="Sistema gerencia escola" class="w3-hover-opacity" onclick="onClick(this)" src="img/4.jpg" style="width:100%" /> <a href="https://apps.rodrigofaustino.com.br/escola/v15/login.php" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+ <i class="fa fa-external-link" aria-hidden="true"></i>
+ Abrir</a></div>
+</div>
+
+<div class="w3-row-padding w3-center w3-section">
+<div class="w3-row-padding w3-center">
+<div class="w3-col m3"><img alt="Site para Advogados" class="w3-hover-opacity" onclick="onClick(this)" src="img/2.jpg" style="width:100%" /> <a href="http://bezerraecoutinho.com.br/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+ Abrir</a></div>
+
+<div class="w3-col m3"><img alt="Aplicativo simulador de provas de concursos públicos" class="w3-hover-opacity" onclick="onClick(this)" src="img/p2.jpg" style="width:100%" /> <a href="https://play.google.com/store/apps/details?id=com.appybuilder.ev_rodrigo_eterno.concursosx" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+ Abrir</a></div>
+
+<div class="w3-col m3"><img alt="Aplicativo leitura facial das emoções" class="w3-hover-opacity" onclick="onClick(this)" src="img/p3.jpg" style="width:100%" /> <a href="https://play.google.com/store/apps/details?id=com.rodrigofaustino.faces" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+ Abrir</a></div>
+
+<div class="w3-col m3"><img alt="Game 2048 Blocos" class="w3-hover-opacity" onclick="onClick(this)" src="img/p4.jpg" style="width:100%" /> <a href="https://play.google.com/store/apps/details?id=com.rodrigofaustino.br2048x" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+ Abrir</a></div>
+
+<div class="w3-col m3"><img alt="Aplicativo Teste de inteligencia" class="w3-hover-opacity" onclick="onClick(this)" src="img/p5.jpg" style="width:100%" /> <a href="https://play.google.com/store/apps/details?id=com.appybuilder.ev_rodrigo_eterno.inteligencia" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+ Abrir</a></div>
+
+<div class="w3-col m3"><img alt="Aplicativo Teste de memoria" class="w3-hover-opacity" onclick="onClick(this)" src="img/p6.jpg" style="width:100%" /> <a href="https://play.google.com/store/apps/details?id=com.appybuilder.ev_rodrigo_eterno.memoriax" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+ Abrir</a></div>
+
+<div class="w3-col m3"><img alt="Pratica de mindfulness" class="w3-hover-opacity" onclick="onClick(this)" src="img/p7.jpg" style="width:100%" /> <a href="https://play.google.com/store/apps/details?id=com.appybuilder.ev_rodrigo_eterno.mindfulness" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+ Abrir</a></div>
+ 
+ <div class="w3-col m3"><img alt="Conferidor Lotofácil" class="w3-hover-opacity" onclick="onClick(this)" src="img/conferi.png" style="width:130%" /> <a href="https://apps.rodrigofaustino.com.br/app/loteria/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+ Abrir</a></div>
+</div>
+</div>
+</div>
+<!-- Modal for full size images on click-->
+
+<div class="w3-modal w3-black" id="modal01" onclick="this.style.display='none'">
+<div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64"><img class="w3-image" id="img01" />
+<p class="w3-opacity w3-large" id="caption"></p>
+</div>
+</div>
+
+
+<div class="w3-container" id="cursos">
+<h3 class="w3-center">CURSOS</h3>
+
+<p class="w3-center"><em>Aqui est&atilde;o alguns dos cursos com uma ferramenta que acelera o desenvolvimento.<br />
+com esta ferramenta apenas com a no&ccedil;&atilde;o de banco de dados voce desenvolve sistemas rapidamente</em></p>
+&nbsp;
+
+<div class="w3-container ">
+<div class="flip-card  ">Cursos
+<div class="flip-card-inner">
+<div class="flip-card-front"><img alt="Udemy" src="img/udemy.jpg" style="width:140px;height:140px;" /> <img alt="Udemy" src="img/hotm.jpeg" style="width:140px;height:140px;" /></div>
+
+<div class="flip-card-back w3-blue">
+<h3>sistema web do zero com PHPMaker</h3>
+<a href="https://www.udemy.com/course/rodrigofaustino/" target="_blank">udemy Clique aqui</a>
+
+<p>sem pr&eacute; requisito minimo</p>
+
+<h3>2 sistemas web do zero com PHPMaker</h3>
+<a href="https://pay.hotmart.com/U9834324D?off=xdbgl927&amp;checkoutMode=0&amp;bid=1590028448751U" target="_blank">hotmart Clique aqui</a>
+
+<p>sem pr&eacute; requisito minimo</p>
+</div>
+</div>
+</div>
+</div>
+<br />
+<br />
+<br />
+&nbsp;
+<h2></h2>
+</div>
+
+
+
+<div class="w3-content w3-container w3-padding-64" id="consulta">
+    <h3 class="w3-center">CONSULTORIA EM PROJETOS</h3>
+
+<p class="w3-center"><em>Caso tenha projetos feitos em PHP e queira uma integração ou suporte no desenvolvimento pode chamar para fazer parte do seu projeto por preço fixo por hora,
+<br>  abaixo uns jquery que podem ajudar em seus projetos</em></p>
+&nbsp;
+  <div class="slideshow-container">
+
+<div class="mySlides">
+      <p class="author">- Validar data</p>
+  <q>
+<p>$('#x_Data')</p>
+<p>.mask('99/99/9999', {</p>
+<p>translation: {</p>
+<p>A: { pattern: /[0-3]/ },</p>
+<p>B: { pattern: /[0-9]/ },</p>
+<p>C: { pattern: /[0-1]/ },</p>
+<p>D: { pattern: /[0-9]/ }</p>
+<p>},</p>
+<p>onKeyPress: function(a, b, c, d) {</p>
+<p>if (!a) return;</p>
+<p>let m = a.match(/(\d{1})/g);</p>
+<p>if (!m) return;</p>
+<p>if (parseInt(m[0]) === 3) // se primeiro digito do dia for 3</p>
+<p>{
+<p>d.translation.B.pattern = /[0-1]/; //max do segundo digito de 0 a 1</p>
+<p>} else {
+<p>d.translation.B.pattern = /[0-9]/; //senão de 0 a 9</p>
+<p>}
+<p>if (parseInt(m[2]) == 1) //se o primeiro digito do mes for 1</p>
+<p>{
+<p>d.translation.D.pattern = /[0-2]/; //o segundo digito é de 0 a 2</p>
+<p>} else {
+<p>d.translation.D.pattern = /[0-9]/; //senao de 0 a 9</p>
+<p>}</p>
+
+<p>let temp_value = c.val();</p>
+<p>c.val('');</p>
+<p>c.unmask().mask('99/99/9999', d);</p>
+<p>c.val(temp_value);</p>
+<p>}</p>
+<p>})</p>
+<p>.keyup();</p>
+
+</q>
+
+</div>
+
+<div class="mySlides">
+      <p class="author">- Validar CPF</p>
+  <q>
+<p>$(document).ready(function(){</p>
+<p>$("#x_CPF").mask("999.999.999-99"); //mascara do cpf</p>
+<p>$("#x_CPF").blur(function () { //funcao de validacao</p>
+<p>var cpf = $("#x_CPF").val();</p>
+<p>var filtro = /^\d{3}.\d{3}.\d{3}-\d{2}$/i;</p>
+<p>if(!filtro.test(cpf)) //verifica se ha ponto e traço</p>
+<p>{ window.alert("CPF inválido. Tente novamente.");</p>
+<p>return false; }</p>
+<p>cpf = remove(cpf, ".");//remove os pontos</p>
+<p>cpf = remove(cpf, "-");//remove o traço</p>
+<p>//abaixo verifica se todos numeros sao repetidos</p>
+<p>if(cpf.length != 11 || cpf == "00000000000" || cpf == "11111111111" ||</p>
+<p>cpf == "22222222222" || cpf == "33333333333" || cpf ==</p>
+<p>"44444444444" || cpf == "55555555555" || cpf == "66666666666" || cpf ==</p>
+<p>"77777777777" ||</p>
+<p>cpf == "88888888888" || cpf == "99999999999")</p>
+<p>{</p>
+<p>alert("CPF inválido. Tente novamente.");</p>
+<p>return false;</p>
+<p>}</p>
+<p>soma = 0;</p>
+<p>for(i = 0; i < 9; i++) //soma os digito antes do traço</p>
+<p>{ soma += parseInt(cpf.charAt(i)) * (10 - i);</p>
+<p>}</p>
+<p>resto = 11 - (soma % 11);</p>
+<p>if(resto == 10 || resto == 11)</p>
+<p>{ resto = 0;</p>
+<p>} if(resto != parseInt(cpf.charAt(9))){</p>
+<p>alert("CPF inválido. Tente novamente.");</p>
+<p>return false;</p>
+<p>} soma = 0;</p>
+<p>for(i = 0; i < 10; i ++)</p>
+<p>{ soma += parseInt(cpf.charAt(i)) * (11 - i);</p>
+<p>} resto = 11 - (soma % 11);</p>
+<p>if(resto == 10 || resto == 11)</p>
+<p>{ resto = 0;</p>
+<p>} if(resto != parseInt(cpf.charAt(10))){</p>
+<p>alert("CPF inválido. Tente novamente.");</p>
+<p>return false;</p>
+<p>} //window.alert("CPF Válido.");</p>
+<p>return true;</p>
+<p>function remove(str, sub) {</p>
+<p>i = str.indexOf(sub);</p>
+<p>r = "";</p>
+<p>if (i == -1) return str;</p>
+<p>{</p>
+<p>r += str.substring(0,i) + remove(str.substring(i + sub.length), sub);</p>
+<p>}</p>
+<p>return r;</p>
+<p>}</p>
+<p>});</p>
+<p>});</p>
   
-  </div>
-  <p>Desenvolvimento <a href="https://apps.rodrigofaustino.com.br" title="rodrigo faustino" target="_blank" class="w3-hover-text-green">Rodrigo Faustino</a></p>
-</footer>
- </section>
- <ul>
-   <li>
-   
-     <span><i class="fa fa-lightbulb-o" aria-hidden="true"></i></span>
-    <span><i class="fa fa-lightbulb-o" aria-hidden="true"></i></span>
-   </li>
-  </ul>
- <script src="css/jquery-3.3.1.js"></script>
- <script type="text/javascript">
-  $(document).ready(function(){
-   $('ul').click(function(){
-    $('ul').toggleClass('active')
-    $('section').toggleClass('dark')
-   })
-  })
- </script>
+  </q>
+  
+  
+</div>
+
+<div class="mySlides">
+     <p class="author">- Contador de caracteres</p>
+  <q>
+<p>     $("#div1").addClass("contaletra"); //onde será exibido, lembrando que tem criar um span ou div com id="div1" em algum lugar proximo ao campo</p> 
+<p>$(document).on("keydown", "#x_Obs", function () {</p> 
+<p>var caracteresRestantes = 300;</p> 
+<p>var caracteresDigitados = parseInt($(this).val().length);</p> 
+<p>var caracteresRestantes = caracteresRestantes - caracteresDigitados;</p> 
+
+<p>$(".contaletra").text('Restam '+caracteresRestantes +' *');</p> 
+
+<p>if(caracteresRestantes==0){</p> 
+<p>$("#x_Obs").prop("readonly", true);//fecha a observação caso os caracteres tenham chegado a zero</p> 
+<p>}</p> 
+
+
+<p>});</p> 
+<p>$("#x_Obs").blur(function () {</p> 
+<p>var qtd = $("#x_Obs").val();</p> 
+<p>if (qtd.length > 300) {</p> 
+
+<p>window.alert("Observação com mais de 300 caracteres.");</p> 
+<p>$("#x_Obs").val("");//caso tenha colado mais de 300 caracteres será apagado tudo</p> 
+<p>//return false; //pode colocar algo para não mais escrever</p> 
+<p>} else{</p> 
+<p>return true;</p> 
+<p>}</p> 
+<p>});</p> 
+  </q>
+ 
+</div>
+
+<div class="mySlides">
+     <p class="author">- Campo sumir ou aparecer </p>
+  <q>
+<p>      $("#x_CampoY").hide();//input do campo oculto</p>
+<p> $("#r_CampoY").hide();//texto do campo oculto</p>
+<p> $("#x_CampoSelectX").change(function() {//caso o select seja alterado o valor</p>
+<p> if (this.value == 2 ) { //exemlo cpf=2 e rg=1</p>
+<p> $("#x_CampoY").show();//mostra campo</p>
+<p> $("#r_CampoY").show();//mostra campo</p>
+<p> $("#x_CampoY").mask("999.999.999-99", {clearIfNotMatch: true}, {reverse: true}, {selectOnFocus: true}); //cria mascara</p>
+<p> } else if (this.value == 1 ){ //rg</p>
+<p> $("#x_CampoY").show();</p>
+<p> $("#r_CampoY").show();</p>
+<p> $("#x_CampoY").mask("99.999.999-aa"); //cria mascara rg</p>
+
+<p> }else if (this.value == '' ){//se o valor voltar nullo</p>
+<p> $("#x_CampoY").hide();//esconde os campos</p>
+<p> $("#r_CampoY").hide();</p>
+<p> }</p>
+<p> else {</p>
+<p> $("#x_CampoY").show();</p>
+<p> $("#r_CampoY").show();</p>
+<p> $("#x_CampoY").unmask();//retira a mascara</p>
+<p> }</p>
+
+<p> });</p>
+  </q>
+ 
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
 <script>
-// Modal Image Gallery
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>  
+
+
+
+</div>
+
+<div class="w3-container" id="venda">
+<h3 class="w3-center">Projetos à venda</h3>
+
+<p class="w3-center"><em>Aqui est&atilde;o alguns dos projetos que podem ser comprados</p> 
+
+<div class="w3-row-padding w3-center">
+<div class="w3-col m3"><img alt="Rede social de terapeutas" class="w3-hover-opacity" onclick="onClick(this)" src="img/tera.png" style="width:100%" /> <a href="https://apps.rodrigofaustino.com.br/terapeuta" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+ Abrir</a></div>
+
+<div class="w3-col m3"><img alt="Sistema de calendários ou eventos" class="w3-hover-opacity" onclick="onClick(this)" src="img/calendario.png" style="width:100%" /> <a href="https://apps.rodrigofaustino.com.br/app/calendario" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+ Abrir</a></div>
+
+<div class="w3-col m3"><img alt="Gestão de assinaturas" class="w3-hover-opacity" onclick="onClick(this)" src="img/ass.png" style="width:100%" /> <a href="https://apps.rodrigofaustino.com.br/app/assinar/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+ Abrir</a></div>
+
+
+</div>
+<div class="w3-row-padding w3-center">
+<div class="w3-col m3"><img alt="Sistema gerencia escola" class="w3-hover-opacity" onclick="onClick(this)" src="img/4.jpg" style="width:100%" /> <a href="https://apps.rodrigofaustino.com.br/escola/v15/login.php" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+ <i class="fa fa-external-link" aria-hidden="true"></i>
+ Abrir</a></div>
+
+<div class="w3-col m3"><img alt="Crie seu formulário rápido" class="w3-hover-opacity" onclick="onClick(this)" src="img/form.png" style="width:100%" /> <a href="https://apps.rodrigofaustino.com.br/app/makeform/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+ Abrir</a></div>
+
+<div class="w3-col m3"><img alt="Portal de Emprego" class="w3-hover-opacity" onclick="onClick(this)" src="img/emprego.png" style="width:100%" /> <a href="https://apps.rodrigofaustino.com.br/app/emprego/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+ Abrir</a></div>
+
+
+</div>
+
+</div>
+<!-- Modal for full size images on click-->
+
+<div class="w3-modal w3-black" id="modal01" onclick="this.style.display='none'">
+<div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64"><img class="w3-image" id="img01" />
+<p class="w3-opacity w3-large" id="caption"></p>
+</div>
+</div>
+
+<div class="w3-container ">
+
+
+</div>
+
+
+<br />
+<br />
+<br />
+&nbsp;
+<h2></h2>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
+<p>Este módulo é experimental</p>
+<p>Ele irá evoluindo conforme aprende com suas questões</p>
+<p>Não forneça nome, nem dados pessoais a IA, seja totalmente anônimo, converse apenas!!!</p>
+
+<div class="open-button" id="myForm">
+  <form action="" class="form-container">
+    <h1>Escreva</h1>
+
+    <label for="msg" id="xx"><p style="color:black;background-color:Aqua;" bot:<b=""><img src="img/abel.gif" alt="abel" style="width:10%;"> Boa Tarde! meu nome é Hera, em que posso ajudar? você pode começar assim:  </p><p style="color:black;background-color:Aqua;">o que é hipnose?</p></label>
+    
+    <input type="text" placeholder="Escreva.." name="msg" id="msg" required="">
+
+    <button type="submit" class="btn" onclick="talk();"><i class="fa fa-telegram" style="font-size:20px;"></i></button>
+   
+  </form>
+</div>
+ </div>
+<br><br><br><br><br><br><br><br><br>
+
+
+<script>
+		var sou=["Adriana", "Luci", "Artemis",
+ "Miguel","Steve","Abel","Ben","Athena","Javis","Hera","Elisa","Adrielly","Milla"];
+sou.sort();
+var eusou= sou[Math.floor(Math.random() * sou.length)];
+var eu2=eusou;		
+		function bemvindo() {
+		
+				
+
+		var questoes=["o que é hipnose?", "o que é psicologia?", "eu não me sinto bem",
+ "estou triste","estou feliz","como melhorar a memória","o que é memória","o que é felicidade" ];
+questoes.sort();
+var question= questoes[Math.floor(Math.random() * questoes.length)];
+  var bemvindo;
+  var time = new Date().getHours();
+  if (time < 12) {
+    bemvindo = "<p style='color:black; background-color:Aqua;'Bot:<b><img src='img/abel2.gif' alt='abel' style='width:10%;'> Bom dia! meu nome é "+eusou+", em que posso ajudar? você pode começar assim:  </p><p style='color:black;background-color:Aqua;'>"+ question +" </b></p>";
+  } else if (time < 18) {
+    bemvindo = "<p style='color:black;background-color:Aqua;'Bot:<b><img src='img/abel.gif' alt='abel' style='width:10%;'> Boa Tarde! meu nome é "+eusou+", em que posso ajudar? você pode começar assim:  </p><p style='color:black;background-color:Aqua;'>"+ question +"</b></p>";
+  } else {
+    bemvindo = "<p style='color:black;background-color:Aqua;'Bot:<b><img src='img/abel2.gif' alt='abel' style='width:10%;'> Boa Noite! meu nome é "+eusou+", em que posso ajudar? você pode começar assim:  </p><p style='color:black;background-color:Aqua;'>"+ question +"</b></p>";
+  }
+  document.getElementById("xx").innerHTML = bemvindo; 
+}
+
+var d = new Date();
+var months = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+var days = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarte-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
+			know = {
+				"o que é hipnose" : "a hipnose é um estado focado de atenção, onde com sugestões pode fazer intervenções terapêuticas, ou alteração de percepção da dor ou outros estímulos, pode saber mais em <a href='https://rodrigofaustino.com.br/tag/hipnose/'>Temos um artigo que pode ajudar</a>",
+				"o que é hipnose?" : "a hipnose é um estado focado de atenção, onde com sugestões pode fazer intervenções terapêuticas, ou alteração de percepção da dor ou outros estímulos, pode saber mais em <a href='https://rodrigofaustino.com.br/tag/hipnose/'>Temos um artigo que pode ajudar</a>",
+				"hipnose?" : "a hipnose é um estado focado de atenção, onde com sugestões pode fazer intervenções terapêuticas, ou alteração de percepção da dor ou outros estímulos, pode saber mais em <a href='https://rodrigofaustino.com.br/tag/hipnose/'>Temos um artigo que pode ajudar</a>",
+				"hipnose" : "a hipnose é um estado focado de atenção, onde com sugestões pode fazer intervenções terapêuticas, ou alteração de percepção da dor ou outros estímulos, pode saber mais em <a href='https://rodrigofaustino.com.br/tag/hipnose/'>Temos um artigo que pode ajudar</a>",
+				
+				"hipnoterapia" : "a hipnose é um estado focado de atenção, onde com sugestões pode fazer intervenções terapêuticas, ou alteração de percepção da dor ou outros estímulos, pode saber mais em <a href='https://rodrigofaustino.com.br/tag/hipnose/'>Temos um artigo que pode ajudar</a>",
+				
+			
+				"quem pode hipnotizar" : "quem fez curso capacitante com hipnologos experiênte, pode saber mais em <a href='https://rodrigofaustino.com.br/tag/hipnose/'>Temos um artigo que pode ajudar</a>",
+				"quem pode hipnotizar?" : "quem fez curso capacitante com hipnologos experiênte, pode saber mais em <a href='https://rodrigofaustino.com.br/tag/hipnose/'>Temos um artigo que pode ajudar</a>",
+				"o que é hipnoterapia?" : "uma terapia com uso da hipnose",
+				"o que é hipnoterapia" : "uma terapia com uso da hipnose",
+				"obrigado" : "foi um prazer",
+				"o que é regressão?" : "uma técnica da psicanálise, onde a pessoa pode sentir vivamente uma possivel memória antiga ou representação de fatos do seu passado ou uma metáfora representando uma outra vida, que sendo ressignificada pode resolver problemas atuais",
+				"regressão?" : "uma técnica da psicanálise, onde a pessoa pode sentir vivamente uma possivel memória antiga ou representação de fatos do seu passado ou uma metáfora representando uma outra vida, que sendo ressignificada pode resolver problemas atuais",
+				"vidas passadas" : "terapia de vidas passadas, chama-se assim porque uitas pessoas tem uma forte crença que seus problemas são oriundos de outras vidas, uma técnica da terapêutica, onde a pessoa pode sentir vivamente uma representação de fatos do seu passado transformados em uma metáfora representando uma outra vida, que sendo ressignificada pode resolver problemas atuais",
+				 "o que é vidas passadas" : "terapia de vidas passadas, chama-se assim porque uitas pessoas tem uma forte crença que seus problemas são oriundos de outras vidas, uma técnica da terapêutica, onde a pessoa pode sentir vivamente uma representação de fatos do seu passado transformados em uma metáfora representando uma outra vida, que sendo ressignificada pode resolver problemas atuais",
+				
+				"o que é regressão" : "uma técnica da psicanálise, onde a pessoa pode sentir vivamente uma possivel memória antiga ou representação de fatos do seu passado ou uma metáfora representando uma outra vida, que sendo ressignificada pode resolver problemas atuais",
+				"o que é TVP" : "terapia de vidas passadas, chama-se assim porque uitas pessoas tem uma forte crença que seus problemas são oriundos de outras vidas, uma técnica da terapêutica, onde a pessoa pode sentir vivamente uma representação de fatos do seu passado transformados em uma metáfora representando uma outra vida, que sendo ressignificada pode resolver problemas atuais",
+				"o que é TVP?" : "terapia de vidas passadas, chama-se assim porque uitas pessoas tem uma forte crença que seus problemas são oriundos de outras vidas, uma técnica da terapêutica, onde a pessoa pode sentir vivamente uma representação de fatos do seu passado transformados em uma metáfora representando uma outra vida, que sendo ressignificada pode resolver problemas atuais",
+				 "quanto é uma sessão de hipnose?" : "depende muito do que você precisa, deve ser feita uma entrevista que se chama anamnese para saber com exatidão sua necessidade",
+				  "quanto é uma sessão?" : "depende muito do que você precisa, deve ser feita uma entrevista que se chama anamnese para saber com exatidão sua necessidade",
+				   "quanto é uma sessão de hipnose" : "depende muito do que você precisa, deve ser feita uma entrevista que se chama anamnese para saber com exatidão sua necessidade",
+			       "olá" : "olá tudo bem?",
+			       "socorro" : "em que posso ajudar?",
+			       "o que é mindfulness" : "<a href='https://rodrigofaustino.com.br/tag/mindfulness/'>Temos um artigo que pode ajudar</a>",
+				"como você está?" : " bem e você?",
+				"estou triste" : "ruim, mas a tristeza vai passar, procurou fazer uma coisa que costuma não fazer diariamente",
+				"não estou muito bem" : "por algum motivo em especial? já folou com outra pessoa sobre",
+				"gosto" : "é mesmo? então fale sobre isso",
+				"o que é memória" : "<a href='https://rodrigofaustino.com.br/tag/memoria/'>Temos um artigo que pode ajudar</a>",
+				"como melhorar a memória?" : "https://rodrigofaustino.com.br/tag/memoria/'>Temos um artigo que pode ajudar</a>",
+				"como melhorar a memória" : "https://rodrigofaustino.com.br/tag/memoria/'>Temos um artigo que pode ajudar</a>",
+				"minha mãe morreu" : "que triste, meus pesames",
+				"meu pai morreu" : "que triste, meus pesames, que tal recordar momentos felizes que viveram juntos",
+				"meu filho morreu" : "que triste, meus pesames, que tal recordar momentos felizes que viveram juntos",
+				"estou de luto" : "que triste, meus pesames, que tal recordar momentos felizes que viveram juntos",
+				"sim" : "sim, o quê? fale mais sobre",
+				"estou feliz" : " que bom fico feliz por avocê",
+				"eu não me sinto bem" : "o que sente? é dor?",
+				"estou com dor" : "onde é sua dor?",
+				"dor" : "onde é sua dor?",
+				"estou com dor" : "onde é sua dor? procure um médico",
+				"doi" : "onde é sua dor?",
+				"no coração" : "você pode dizer de 0 a 10 quanto é esta dor?",
+				"no peito" : "você pode dizer de 0 a 10 quanto é esta dor?",
+				"na barriga" : "você pode dizer de 0 a 10 quanto é esta dor?",
+				"na cabeça" : "você pode dizer de 0 a 10 quanto é esta dor?",
+				"me sinto feliz" : "qual o motivo? pode compartilhar isso",
+				"qual o seu nome" : "tenho muitos nome",
+				"fale um deles" : " um deles o quê",
+				"um de seus nomes" : "me chame como quiser",
+				"como você foi feito" : "bem simples, poucas linhas",
+				"fale um nome" : "que nome",
+				"o que é você?" : "sou o seu ajudador",
+				"seu nome?" : "meu nome é "+eu2+" ",
+				"qual seu nome?" : "meu nome é "+eu2+" ",
+				"qual o seu nome?" : "meu nome é "+eu2+" ",
+				"seu nome" : "meu nome é "+eu2+" ",
+				"fale seu nome" : "meu nome é "+eu2+" ",
+				"qual é o seu sexo" : "eu não tenho, sou um programa",
+				"quem te criou" : "a mente humana",
+				"você sabe todas as respostas" : "só o que preciso saber",
+				"bom dia" : "bom dia, tudo bem?",
+				"quero transar" : "tem vários meios para isso",
+				"quero sexo" : "tem vários meios para isso",
+				"tudo bem" : "então fale sobre seu dia?",
+				"boa tarde" : "boa tarde, tudo bem?",
+				"boa noite" : "boa noite, tudo bem?",
+				"quanto é a hipnose?" : "se quiser uma sessão de hipnose o valor irá depender do proposito se há uma real necessidade de tratamento",
+				"preço da hipnose" : "se quiser uma sessão de hipnose o valor irá depender do proposito se há uma real necessidade de tratamento",
+				"o que é esquizofrenia?" : "A esquizofrenia é o principal transtorno psicótico, caracterizado como uma síndrome que provoca distúrbios da linguagem, pensamento, percepção, atividade social, afeto e vontade. É mais comum em jovens, no final da adolescência, apesar de poder surgir ao longo de outras idades, e alguns dos sinais e sintomas mais comuns são alucinações, alterações do comportamento, delírios, pensamento desorganizado, alterações do movimento ou afeto superficial",
+				"sindrome de burnout" : "é um distúrbio psíquico de caráter depressivo, precedido de esgotamento físico e mental intenso, definido por Herbert J. Freudenberger como  um estado de esgotamento físico e mental cuja causa está intimamente ligada à vida profissional",
+				"quanto é o preço da sessão" : "depende do proposito, geralmente no mercado encontrará profissionais cobrando de (100)cem reais até (10.000)dez mil.",
+				"quanto é o preço da sessão de hipnose" : "depende do proposito, geralmente no mercado encontrará profissionais cobrando de (100)cem reais até (10.000)dez mil.",
+				"quanto é o preço da sessão?" : "depende do proposito, geralmente no mercado encontrará profissionais cobrando de (100)cem reais até (10.000)dez mil.",
+				"quanto é o preço da sessão de hipnose?" : "depende do proposito, geralmente no mercado encontrará profissionais cobrando de (100)cem reais até (10.000)dez mil.",
+				"quanto é o preço da hipnose" : "depende do proposito, geralmente no mercado encontrará profissionais cobrando de (100)cem reais até (10.000)dez mil.",
+				"qual é o valor das consultas" : "depende do proposito, geralmente no mercado encontrará profissionais cobrando de (100)cem reais até (10.000)dez mil.",
+				"quanto é o preço da hipnose?" : "depende do proposito, geralmente no mercado encontrará profissionais cobrando de (100)cem reais até (10.000)dez mil.",
+				"qual é o valor das consultas?" : "depende do proposito, geralmente no mercado encontrará profissionais cobrando de (100)cem reais até (10.000)dez mil.",
+				"razão ou emoção?" : "Acho interessante o equilíbrio entre ambos. Está claro que sua pergunta se refere a relacionamento afetivo. então, utilize seu lado racional para avaliar os riscos, as vantagens, se é uma relação que vale a pena viver, porque seu lado emocional deve querer viver a situação, mas tem medo de se machucar, de não ser correspondida, de dar tudo errado. ",
+				"deus" : "(questão de crença, pode ser que nem exista na realidade fora da mente dos que creem) nas religiões primitivas, designação dada às forças ocultas, aos espíritos mais ou menos personalizados.",
+				"deus?" : "(questão de crença, pode ser que nem exista na realidade fora da mente dos que creem) nas religiões primitivas, designação dada às forças ocultas, aos espíritos mais ou menos personalizados.",
+				"o que é deus?" : "(questão de crença, pode ser que nem exista na realidade fora da mente dos que creem) nas religiões primitivas, designação dada às forças ocultas, aos espíritos mais ou menos personalizados.",
+				"quem é deus" : "depende de que ponto de vista da religião, cada religião tem seu significado para deus",
+				"quem é deus?" : "depende de que ponto de vista da religião, cada religião tem seu significado para deus",
+				"anorexia" : "você precisa de terapia, pois este é um problema muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"odeio minha vida" : "você precisa de terapia, pois este é um problema muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"odeio minha familia" : "você precisa de terapia, pois este é um problema muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"odeio as pessoas" : "você precisa de terapia, pois este é um problema muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"sou viciado em sexo" : "você precisa de terapia, pois este é um problema muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"sou viciado em pornografia" : "você precisa de terapia, pois este é um problema muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"sou viciado em drogas" : "você precisa de terapia, pois este é um problema muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"sou viciado" : "você precisa de terapia, pois este é um problema muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"sou deus" : "você precisa de terapia, pois este é um problema muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				
+				"bulemia" : "você precisa de terapia, pois este é um problema muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"bulemia?" : "você precisa de terapia, pois este é um problema muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"tenho ansiedade" : "você precisa de terapia, pois este é um problema muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"ansiedade" : "você precisa de terapia, pois este é um problema muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"ansiedade?" : "ok o que gostaria de saber sobre ansiedade?",
+				"estou com ansiedade" : "você precisa de terapia, pois este é um problema muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"sou ansioso" : "você precisa de terapia, pois este é um problema muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"depressão" : "ok, o que gostaria de saber sobre depressão",
+				"estou com depressão?" : "você precisa de terapia, pois este é um problema muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"depressão?" : "você precisa de terapia, pois este é um problema muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"depressão" : "você precisa de terapia, pois este é um problema muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"tenho depressão" : "você precisa de terapia, pois este é um problema muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"quero morrer" : "você precisa de terapia, pois isso é muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"não aquento mais" : "você precisa de terapia, pois isso é muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"não quero viver" : "você precisa de terapia, pois isso é muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"quero morrer" : "você precisa de terapia, pois isso é muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"quero me matar" : "você precisa de terapia, pois isso é muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"quero me suicidar" : "você precisa de terapia, pois isso é muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"ricar rico" : "para isso você pode tentar a sorte na loteria ou criar um negocio de sucesso",
+				"como ficar rico" : "para isso você pode tentar a sorte na loteria ou criar um negocio de sucesso",
+				"como ficar rico?" : "para isso você pode tentar a sorte na loteria ou criar um negocio de sucesso",
+				"como ter sucesso na vida?" : "isso depende muito que tipo de sucesso almeja,mas a base é Autoconhecimento. Saiba quais são seus pontos fortes e que aspectos você precisa melhorar, tanto no âmbito profissional como no pessoal.",
+				"como ter sucesso na vida" : "isso depende muito que tipo de sucesso almeja,mas a base é Autoconhecimento. Saiba quais são seus pontos fortes e que aspectos você precisa melhorar, tanto no âmbito profissional como no pessoal.",
+				"quero suicidar" : "você precisa de terapia, pois isso é muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"quero matar alguém" : "você precisa de terapia, pois isso é muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"quero matar alguém" : "você precisa de terapia, pois isso é muito sério, em <a href='https://rodrigofaustino.com.br/#contato' target='_blank'>pode mandar um email para o rodrigo para traçar a melhor estrategia para seu caso com uso da hipnose</a>",
+				"introspecção" : "reflexão que a pessoa faz sobre o que ocorre no seu íntimo, sobre suas experiências ou pensamentos etc.",
+				"o que é felicidade?" : "é um termo muito abrangente e subjetivo e, muitas vezes, difícil de ser explicado. ",
+				"o que é felicidade" : "é um termo muito abrangente e subjetivo e, muitas vezes, difícil de ser explicado. ",
+				"felicidade" : "é um termo muito abrangente e subjetivo e, muitas vezes, difícil de ser explicado. ",
+				"quero ser feliz" : "é um termo muito abrangente e subjetivo e, muitas vezes, difícil de ser explicado. ",
+				"como ser feliz?" : "Os motivos pelos quais uma pessoa é feliz ou infeliz são relativos, mas eu acredito que muitos deles venham das conquistas, realizações pessoais e da satisfação com a própria vida ou da falta de tudo isso.",
+				"como ser feliz" : "Os motivos pelos quais uma pessoa é feliz ou infeliz são relativos, mas eu acredito que muitos deles venham das conquistas, realizações pessoais e da satisfação com a própria vida ou da falta de tudo isso.",
+				"uma introspecção" : "reflexão que a pessoa faz sobre o que ocorre no seu íntimo, sobre suas experiências ou pensamentos etc.",
+				
+				"uma introspecção?" : "reflexão que a pessoa faz sobre o que ocorre no seu íntimo, sobre suas experiências ou pensamentos  etc.",
+				"o que é psicologia" : "ciência que trata dos estados e processos mentais, do comportamento do ser humano e de suas interações com um ambiente físico e social.",
+				"o que é psicologia?" : "ciência que trata dos estados e processos mentais, do comportamento do ser humano e de suas interações com um ambiente físico e social.",
+				"psicologia" : "ciência que trata dos estados e processos mentais, do comportamento do ser humano e de suas interações com um ambiente físico e social.",
+				
+				"hora":""+d.getHours()+" horas e "+ d.getMinutes()+" minutos",
+				"fale a hora":""+d.getHours()+" horas e "+ d.getMinutes()+" minutos",
+				"horas":""+d.getHours()+" horas e "+ d.getMinutes()+" minutos",
+				"que horas":""+d.getHours()+" horas e "+ d.getMinutes()+" minutos",
+				"que horas são":""+d.getHours()+" horas e "+ d.getMinutes()+" minutos",
+				"que horas são?":""+d.getHours()+" horas e "+ d.getMinutes()+" minutos",
+				"que horas são agora?":""+d.getHours()+" horas e "+ d.getMinutes()+" minutos",
+				"que dia é hoje":" hojé é "+days[d.getDay()]+"dia "+d.getDay()+" de "+months[d.getMonth()] +" de "+d.getFullYear()+" ",
+				"que dia é hoje?":" hojé é "+days[d.getDay()]+"dia "+d.getDay()+" de "+months[d.getMonth()] +" de "+d.getFullYear()+" ",
+				"hoje é?":" hojé é "+days[d.getDay()]+" dia "+d.getDay()+" de "+months[d.getMonth()] +" de "+d.getFullYear()+" ",
+				"hoje":" hojé é "+days[d.getDay()]+" dia "+d.getDay()+" de "+months[d.getMonth()] +" de "+d.getFullYear()+" ",
+				"2":" hojé é "+days[2]+" dia "+d.getDay()+" de "+months[d.getMonth()] +" de "+d.getFullYear()+" ",
+				"ok" : ":)"
+			};
+			function talk() {
+			var user = document.getElementById("msg").value.toLowerCase();
+			
+		
+
+
+var critic=["seja mais educado", "eu levo tudo a serio", "você não aprendeu nada com seus pais?",
+ "você gosta quando falam isso pra você?","o que você acha disso?","você gosta disso?"
+ ,"houve um sábio que disse que a boca fala do que o coração esta cheio","já tentou andar com pessoas mais inteligentes?"];
+critic.sort();
+var critica= critic[Math.floor(Math.random() * critic.length)];
+
+
+var respost= ["o que você acha disso?", "fale mais sobre isso", "tem algo que queira completar?",
+ "vou pensar mais sobre isso","já falou isso para alguém?","como outra pessoa agiria com isso?"
+ ,"já parou para refletir melhor sobre isso?","já tentou ver isso de outro ponto de vista?"
+ ,"isso depende do ponto de vista","você precisa descobrir por si só","nem o google tem resposta para tudo"
+ ,"uma introspecção é válida já fez uma (auto avaliação)","acho que não entendi bem isso","caso não resolva hoje volte outro dia"];
+respost.sort();
+var favorite = respost[Math.floor(Math.random() * respost.length)];
+
+
+			document.getElementById("msg").value = "";
+				document.getElementById("xx").innerHTML += "<p style='color:black; background-color:Tomato; text-align:right;'>"+user+"<img src='img/avatar.png' alt='Eu' style='width:10%;'></p>";
+				if (user in know) {
+					document.getElementById("xx").innerHTML +="<p style='color:black;background-color:Aqua;'Bot:<b><img src='img/abel.gif' alt='abel' style='width:10%;'> "+ know[user]+"</b></p>";
+				}
+				else if (user.indexOf("viado")>0 || user.indexOf("gay")>0|| user.indexOf("buceta")>0 || user.indexOf("puta")>0 || user.indexOf("puta")>0
+				|| user.indexOf("xoxota")>0 || user.indexOf("cu")>0) {
+  					document.getElementById("xx").innerHTML += "<p style='color:black;background-color:Aqua;'Bot:<b><img src='img/abel2.gif' alt='abel' style='width:10%;'> "+critica+"</b></p>";
+				} 
+				else if (user.length ==0 ) {
+  					document.getElementById("xx").innerHTML += "<p style='color:black;background-color:Aqua;'Bot:<b><img src='img/abel2.gif' alt='abel' style='width:10%;'> Escreva alguma coisa!!</b></p>";
+				} 
+				else {
+					document.getElementById("xx").innerHTML += "<p style='color:black;background-color:Aqua;'Bot:<b><img src='img/abel2.gif' alt='abel' style='width:10%;'> "+favorite+"</b></p>";
+						 
+var urlString ="q="+user;
+
+  $.ajax
+  ({
+  url: "q_ajax.php",
+  type : "POST",
+  cache : false,
+  data : urlString,
+  success: function(response)
+  {
+  //alert(response);
+  }
+  });
+
+				}
+			} 
+			
+		</script>
+
+    
+<div class="footer">
+  <p>
+<script type="text/javascript" src="https://apps.rodrigofaustino.com.br/gcount.php?page=test"><!--
+//--></script> Visitas únicas </p>
+
+    <label class="switch">
+  <input onclick="dark()" type="checkbox">
+  <span class="slider round"></span>
+</label>
+    </div>
+<button id="myBtn" onclick="topFunction()" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+</button><script>
+// Open and close the sidebar on medium and small screens
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
 function onClick(element) {
   document.getElementById("img01").src = element.src;
   document.getElementById("modal01").style.display = "block";
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
+// Change style of top container on scroll
 
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
+function dark() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
 }
 
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
+// Accordions
+function myAccordion(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-theme";
+  } else { 
+    x.className = x.className.replace("w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-theme", "");
+  }
+}
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
 </script>
-
-</body>
-
-</html>

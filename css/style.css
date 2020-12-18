@@ -1,68 +1,276 @@
-body{
- margin:0;
- padding:0;
- font-family:sans-serif;
+body
+{
+font-size:70%;
+background-color:#999999;
+color:#000000;
+background-color:#f1f1ed;
+margin:0px;
+overflow:auto;
 }
 
-section{
- 
- top:0;
- left:0;
- width:100%;
- height:260em;
- box-sizing:border-box; 
- 
- transition:0.5s;
+body,p,h1,h2,h3,h4,table,td,th,ul,ol,textarea,input
+{
+font-family:verdana,helvetica,arial,sans-serif;
 }
 
-section.dark{
- background:#262626;
- color:#fff;
+h1 {font-size:200%;margin-top:0px;font-weight:normal}
+h2 {font-size:160%;margin-top:10px;margin-bottom:10px;font-weight:normal}
+h3 {font-size:120%;font-weight:normal}
+h4 {font-size:100%;}
+h5 {font-size:90%;}
+h6 {font-size:80%;}
+
+h1,h2,h3,h4,h5,h6
+{
+background-color:transparent;
+color:#000000;
+}
+#wrapper{
+width:950px;
+background:#FFFFFF;
+margin-left:auto;
+margin-right:auto;
+padding:8px;
+}
+
+#adminNav{font-family:Arial, Helvetica, sans-serif; font-size:14px}
+
+#adminNav ul{
+list-style:none;
+}
+#adminNav ul li{
+display:inline;
+margin-left:5px;
+}
+#adminNav ul li a{
+color:#006699;
+text-decoration:none;
+padding:5px;
+background-color:#FAFAFA;
+border:1px solid #EAEAEA;
+-moz-border-radius:4px;
+}
+#searchbg{
+background: url(../images/search-bg.png) no-repeat 0px 0px;
+width:954px;
+height:120px;
+}
+.button{
+background:transparent url(../images/home-search-button.gif) no-repeat scroll left top;
+border:medium none;
+color:#FFFFFF;
+display:block;
+font-family:Arial,Helvetica,sans-serif;
+font-size:15px;
+font-weight:bold;
+height:27px;
+letter-spacing:1px;
+line-height:1em;
+margin:0 0 0.2em;
+padding:2px;
+text-transform:lowercase;
+width:150px;
+}
+
+/* Tabed Nevigation */
+#navCont{clear:both;margin-top:0;margin-left:45px;padding:0;position:relative;z-index:2;}
+#navCont ul{list-style:none;margin:0px;padding:0;text-align:center;float: left;height:25px;clear:both;}
+#navCont ul li{background:url(../images/bg_headt.gif) left top no-repeat;float:left;height:20px;margin:0 5px;padding:0 0 0 4px;}
+
+html>body #navCont ul li{height:25px}
+#navCont ul li a{float:left;background:url(../images/bg_headu.gif) right top no-repeat;display:block;color:#fff;height:20px;font-size:12px;font-weight:700;padding:5px 9px 0 5px;margin:0px 0px 0;text-align:center;text-decoration:none;}
+.white ul li a{color: #ffffff;}
+#navCont ul li.current_page_item{background:url(images/bg_headv.gif) left top no-repeat;}
+#navCont ul li.current_page_item a{background:url(images/bg_headw.gif) right top no-repeat;}
+#orgfix{background-color:#8FBE27;border:none;height:2px;margin:0 auto;width:100%; clear:both;overflow:hidden}
+
+#Nav{font-family:Arial, Helvetica, sans-serif; font-size:14px}
+
+#Nav ul{
+list-style:none;
+}
+#Nav ul li{
+display:inline;
+margin-left:5px;
+}
+#Nav ul li a{
+color:#006699;
+text-decoration:none;
+padding:5px;
+background-color:#FAFAFA;
+border:1px solid #EAEAEA;
+-moz-border-radius:4px;
+}
+
+#listing{font-family:Arial, Helvetica, sans-serif; font-size:13px}
+#listing ul{
+list-style:none;
+border-right:1px solid #EAEAEA;
+}
+#listing ul li{
+margin-left:5px;
+padding:5px;
+}
+#listing ul li a{
+color:#006699;
+text-decoration:none;
+padding:5px;
+}
+
+#addJob{
+background-color:#F0F7F9;
+padding:5px;
+width:100%;
+}
+#addJob label{
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#232323;
+font-weight:bold;
+}
+#addJob h1{
+font-family:Arial, Helvetica, sans-serif;
+color:#4C84BC;
+font-size:20px;
+font-weight:bold;
+border-bottom:1px solid #EAEAEA;
+}
+
+#addJob input[type=text]{
+border:1px solid #CCCCCC;
+padding:5px;
+}
+#addJob span.hint{
+font-family:Arial, Helvetica, sans-serif;
+font-size:10px;
+color:#999999;
+}
+
+<!-- Light Blue Crnr -->
+.jb{display:block}
+.jb *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;
+  background:#D4E6FE}
+.jb1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #ecf4fe;
+  border-right:1px solid #ecf4fe;
+  background:#deecfe}
+.jb2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #fafcfe;
+  border-right:1px solid #fafcfe;
+  background:#dceafe}
+.jb3{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #dceafe;
+  border-right:1px solid #dceafe;}
+.jb4{
+  border-left:1px solid #ecf4fe;
+  border-right:1px solid #ecf4fe}
+.jb5{
+  border-left:1px solid #deecfe;
+  border-right:1px solid #deecfe}
+.jbfg{
+  background:#D4E6FE}
+.search{
+height:30px;
+width:400px;
+margin-left:20px;
+}
+.searchSubmit{
+height:37px;
+margin-left:2px;
+font-size:18px
 }
 
 
-ul{
- position:fixed;
- top:30px;
- left:110px;
- margin:0;
- padding:0;
- width:40px;
- height:30px;
- z-index:1;
- border:1px solid #000;
- border-radius:12px;
- cursor:pointer;
- overflow:hidden;
+#searchResult{
+margin-bottom:10px;
+}
+#searchResult h1{
+color:#0000FF;
+text-decoration:underline;
+margin:0px;
+padding:0px;
 }
 
-ul.active{
- border-color:#fff;
+.footer2{
+background: url(../images/bg_searc.gif) repeat-x;
+background-position:bottom;
+}
+.footer2 a{
+text-decoration:none;
+}
+.footer2 a:hover{
+text-decoration:underline;
 }
 
-ul li{
- list-style:none;
- width:100%;
- height:60px;
- text-align:center;
- text-transform:uppercase;
- transition:0.5s;
+#our-services-page{
+border:1px solid #EAEAEA;
+background-color:#FAFAFA;
+}
+#our-services-page td{
+border-bottom:1px solid #EAEAEA;
+}
+#location{
+font-family:Arial, Helvetica, sans-serif;
+font-size:13px;
+}
+#location ul{
+list-style:none;
+}
+#location ul li{
+display:inline;
+width:150px;
+display:block;
+float:left;
+margin-top:10px;
+}
+#location ul li a{
+text-decoration:none;
+text-transform:capitalize;
+}
+#location ul li a:hover{
+text-decoration:underline;
 }
 
-ul.active li{
- transform:translateY(-30px);
+#categories{
+font-family:Arial, Helvetica, sans-serif;
+font-size:13px;
+}
+#categories ul{
+list-style:none;
+margin-left:auto;
+margin-right:auto;
+margin-left:10px;
+}
+#categories ul li{
+display:inline;
+width:210px;
+display:block;
+float:left;
+margin-top:10px;
+text-align:left;
+}
+#categories ul li a{
+text-decoration:none;
+text-transform:capitalize;
+}
+#categories ul li a span{
+color:#999999;
 }
 
-ul li span{
- display:block;
- width:100%;
- height:30px;
- line-height:30px;
- color:#262626;
- background:#fff;
+#categories ul li a:hover{
+text-decoration:underline;
 }
-
-ul li span:nth-child(1){
- background:#262626;
- color:yellow;
-}﻿
